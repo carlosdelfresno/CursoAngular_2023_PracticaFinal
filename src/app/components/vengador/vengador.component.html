@@ -1,0 +1,28 @@
+<div class="card" style="width: 18rem">
+  <img [src]="vengador.imageurl" class="card-img-top" alt="..." />
+  <div class="card-body">
+    <h5 class="card-title">{{ vengador.name }} | {{ vengador.team }}</h5>
+    <p class="card-text">
+      Created by: {{ vengador.createdby }}
+    </p>
+    <p class="card-text">
+      Publisher: {{ vengador.publisher }}
+    </p>
+    <div class="btn-acciones">
+      <button class="btn btn-secondary" (click)="editVengador(vengador.id)">
+        Editar
+      </button>
+      <button class="btn btn-danger" (click)="deleteVengador(vengador.id)">
+        Eliminar
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- <p>{{ vengador.name }}</p>
+@defer (on hover) {
+    <img [src]="vengador.imageurl" />
+
+    }@placeholder {
+        <img src="assets/placeholder.gif" />
+} -->

@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+      <h1 class="text-center">Lista de vengadores</h1>
+    </div>
+    <div class="col-3">
+      <button class="btn btn-primary" (click)="logout()">
+        Logout
+      </button>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <button class="btn btn-primary" (click)="addVengador()">
+        Añadir vengador
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    @for (vengador of vengadores; track vengador.id) {
+    <div class="col-3">
+      <app-vengador [vengador]="vengador" (delete)="vengadorEliminado()"></app-vengador>
+    </div>
+    }
+  </div>
+</div>

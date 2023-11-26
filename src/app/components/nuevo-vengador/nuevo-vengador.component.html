@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-center">Nuevo vengador</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <form [formGroup]="myForm" (ngSubmit)="addVengador()">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nombre</label>
+          <input class="form-control" type="text" id="name" name="name" formControlName="name" />
+        </div>
+        <div class="mb-3">
+          <label for="realname" class="form-label">Nombre Real</label>
+          <input class="form-control"
+            type="text"
+            id="realname"
+            name="realname"
+            formControlName="realname"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="team" class="form-label">Equipo</label>
+          <input class="form-control" type="text" id="team" name="team" formControlName="team" />
+        </div>
+        <div class="mb-3">
+          <label for="firstappearance" class="form-label"
+            >Primera aparición</label
+          >
+          <input class="form-control"
+            type="text"
+            id="firstappearance"
+            name="firstappearance"
+            formControlName="firstappearance"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="createdby" class="form-label">Creado Por</label>
+          <input class="form-control"
+            type="text"
+            id="createdby"
+            name="createdby"
+            formControlName="createdby"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="publisher" class="form-label">Publicado Por</label>
+          <input class="form-control"
+            type="text"
+            id="publisher"
+            name="publisher"
+            formControlName="publisher"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="imageurl" class="form-label">Imagen</label>
+          <input class="form-control"
+            type="text"
+            id="imageurl"
+            name="imageurl"
+            formControlName="imageurl"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="bio" class="form-label">Bio</label>
+          <textarea rows="3" class="form-control" type="text" id="bio" name="bio" formControlName="bio"></textarea>
+        </div>
+        <div class="btn-acciones">
+        <button class="btn btn-primary" type="submit">Añadir vengador</button>
+        <button class="btn btn-danger" (click)="cancelar()">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
